@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cas d'urgence - ESPRIT CARE</title>
+
+  <!-- Tailwind CSS CDN + couleurs personnalisées -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb',
+            'primary-light': '#f5f4ff',
+            danger: '#ff4757',
+            darkheader: '#404347',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Maps (remplace TA_CLE_API par ta clé réelle) -->
+  
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+</head>
+
+<body class="bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50 min-h-screen flex flex-col font-['Inter']">
+
+  <!-- Header -->
+  <header class="bg-darkheader shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center gap-10">
+          <a href="#" class="flex items-center gap-4">
+            <img src="C:\Users\yomna\Downloads\webf\logoesc.jpeg" alt="ESPRIT CARE Logo" class="h-12 w-auto object-contain"/>
+            <span class="text-2xl font-black text-white">ESPRIT CARE</span>
+          </a>
+
+          <nav class="hidden lg:flex items-center gap-8">
+            <a href="C:\Users\yomna\Downloads\webf\pages\index.html" class="text-gray-300 hover:text-white font-medium transition">Accueil</a>
+            <a href="#" class="text-gray-300 hover:text-white font-medium transition">Mon dossier</a>
+            <a href="#" class="text-gray-300 hover:text-white font-medium transition">Ressources</a>
+            <a href="#" class="text-gray-300 hover:text-white font-medium transition">Contact</a>
+          </nav>
+        </div>
+
+        <button class="bg-primary hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-xl shadow-xl hover:shadow-primary/30 transform hover:scale-105 transition duration-300">
+          Se connecter
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="flex-1 py-12">
+    <div class="max-w-5xl mx-auto px-6">
+      <section class="text-center">
+        <!-- Hero -->
+        <div class="mb-12">
+          <h1 class="text-5xl font-black text-danger mb-6">Urgence ? Nous sommes là pour vous, 24h/24.</h1>
+          <p id="rassurantMessage" class="text-2xl font-medium text-danger italic"></p>
+        </div>
+
+        <!-- Types d'urgence -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <button class="type-btn bg-red-50 border-4 border-danger text-danger py-10 rounded-3xl text-2xl font-bold hover:bg-danger hover:text-white transition shadow-xl">
+            Idées suicidaires
+          </button>
+          <button class="type-btn bg-red-50 border-4 border-danger text-danger py-10 rounded-3xl text-2xl font-bold hover:bg-danger hover:text-white transition shadow-xl">
+            Violence / Abus
+          </button>
+          <button class="type-btn bg-red-50 border-4 border-danger text-danger py-10 rounded-3xl text-2xl font-bold hover:bg-danger hover:text-white transition shadow-xl">
+            Crise de panique
+          </button>
+          <button class="type-btn bg-red-50 border-4 border-danger text-danger py-10 rounded-3xl text-2xl font-bold hover:bg-danger hover:text-white transition shadow-xl">
+            Autre urgence
+          </button>
+        </div>
+
+        <!-- Appel urgent -->
+        <div class="mb-12">
+          <a href="tel:0800123456" class="inline-block bg-danger text-white text-3xl font-black px-16 py-8 rounded-full hover:bg-red-700 transition shadow-2xl transform hover:scale-105">
+            Appeler le 0800 123 456
+          </a>
+        </div>
+
+        <!-- Chat urgent -->
+        <div class="bg-white rounded-3xl shadow-2xl p-10 mb-12 border border-primary-light">
+          <div class="flex justify-between items-center mb-8">
+            <h2 class="text-3xl font-bold text-primary">Chat urgent avec un conseiller</h2>
+            <label class="flex items-center gap-4 cursor-pointer select-none">
+              <span class="text-xl font-medium text-gray-700">Mode anonyme</span>
+              <input type="checkbox" id="anonymeToggle" checked class="sr-only peer">
+              <div class="w-14 h-8 bg-primary rounded-full relative peer-checked:bg-gray-500 transition">
+                <div class="w-7 h-7 bg-white rounded-full absolute top-0.5 left-0.5 peer-checked:translate-x-6 transition"></div>
+              </div>
+            </label>
+          </div>
+
+          <div id="urgenceMessages" class="bg-primary-bg rounded-2xl p-6 min-h-80 max-h-96 overflow-y-auto mb-6 shadow-inner"></div>
+
+          <div id="urgenceTyping" class="hidden text-danger font-bold text-center mb-6 animate-pulse">
+            Conseiller est en train d’écrire…
+          </div>
+
+          <form id="urgenceForm" class="flex gap-4">
+            <input type="text" id="urgenceInput" placeholder="Décrivez votre urgence…" required
+                   class="flex-1 px-6 py-5 border-2 border-primary-light rounded-full focus:border-primary focus:outline-none text-lg">
+            <button type="submit" class="bg-primary text-white px-12 py-5 rounded-full font-bold text-lg hover:bg-indigo-700 transition shadow-xl">
+              Envoyer
+            </button>
+          </form>
+
+          <p id="urgenceTimer" class="text-center text-danger font-bold text-xl mt-6">Réponse estimée dans : 30 secondes</p>
+        </div>
+
+   <!-- Simulateur de respiration pour calmer l'utilisateur -->
+<div class="bg-white rounded-3xl shadow-2xl p-10 border border-primary-light mb-12">
+  <h2 class="text-3xl font-bold text-primary text-center mb-8">Exercice de respiration pour vous calmer</h2>
+  <p class="text-center text-gray-700 mb-8 text-lg">Suivez le cercle : Inspirez quand il grandit, expirez quand il rétrécit (4-7-8 technique).</p>
+
+  <div class="flex flex-col items-center">
+    <!-- Cercle animé -->
+    <div class="relative w-80 h-80">
+      <div id="breathingCircle" class="absolute inset-0 rounded-full bg-primary-light flex items-center justify-center transition-all duration-1000">
+        <div class="text-center text-white font-bold">
+          <p id="breathText" class="text-4xl">Inspirez</p>
+          <p class="text-2xl mt-4" id="breathCount">4 secondes</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bouton démarrer/arrêter -->
+    <button id="startBreathing" class="mt-10 bg-primary text-white px-12 py-5 rounded-full text-2xl font-bold hover:bg-indigo-700 transition shadow-2xl">
+      Démarrer l'exercice
+    </button>
+  </div>
+
+  <p class="text-center text-gray-600 mt-8">Répétez 4 fois pour un effet calmant immédiat.</p>
+</div>
+        <!-- Boutons secondaires -->
+        <div class="flex justify-center gap-10">
+          <button id="urgenceNotesBtn" class="bg-primary-light text-primary px-12 py-6 rounded-full text-2xl font-bold hover:bg-primary hover:text-white transition shadow-2xl">
+            Notes privées
+          </button>
+          <a href="historique.html" class="bg-gray-200 text-gray-800 px-12 py-6 rounded-full text-2xl font-bold hover:bg-gray-300 transition shadow-2xl">
+            Voir mon historique d’urgences
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Modal Notes -->
+  <div id="notesModal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-50 px-6">
+    <div class="bg-white rounded-3xl p-12 max-w-2xl w-full shadow-2xl">
+      <h3 class="text-3xl font-bold text-primary text-center mb-8">Notes privées (visibles seulement par vous)</h3>
+      <textarea id="noteText" placeholder="Notez une pensée, un sentiment…" class="w-full h-64 p-6 border-2 border-primary-light rounded-2xl focus:border-primary focus:outline-none text-lg resize-none"></textarea>
+      <div class="flex justify-end gap-8 mt-10">
+        <button id="closeNotes" class="text-2xl font-bold text-gray-600 hover:text-gray-900">Annuler</button>
+        <button id="saveNote" class="bg-primary text-white px-12 py-6 rounded-full text-2xl font-bold hover:bg-indigo-700 transition shadow-2xl">
+          Sauvegarder
+        </button>
+      </div>
+    </div>
+  </div>
+
+<!-- Footer -->
+  <footer class="bg-slate-900 text-slate-300 mt-24">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+              <img 
+            src="C:\Users\yomna\Downloads\webf\logoesc.jpeg" 
+            alt="ESPRIT CARE Logo" 
+            class="h-12 w-auto object-contain"
+          />
+            <span class="text-2xl font-black text-white font-bold">ESPRIT CARE</span>
+          </div>
+          <p class="text-slate-400">Votre bien-être est notre priorité absolue.</p>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-6">Navigation</h4>
+          <ul class="space-y-3">
+            <li><a href="C:\Users\yomna\Downloads\webf\pages\index.html" class="hover:text-white transition">Accueil</a></li>
+            <li><a href="#" class="hover:text-white transition">Mon dossier</a></li>
+            <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+            <li><a href="#" class="hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-6">Contact</h4>
+          <ul class="space-y-3 text-slate-400">
+            <li>contact@esprit-care.tn</li>
+            <li>+216 71 345 678</li>
+            <li>ESPRIT, El Ghazala</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-6">Légal</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="hover:text-white transition">Politique de confidentialité</a></li>
+            <li><a href="#" class="hover:text-white transition">Mentions légales</a></li>
+            <li><a href="#" class="hover:text-white transition">CGU</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-800 mt-12 pt-8 text-center text-slate-500">
+        © 2025 ESPRIT CARE – Tous droits réservés
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript (identique à ton code original) -->
+  <script>
+    // Messages rassurants dynamiques
+    const messagesRassurants = [
+      "Respirez profondément. Vous n’êtes pas seul.",
+      "Chaque pas compte. Nous sommes avec vous.",
+      "Prenez un moment pour vous. L’aide arrive."
+    ];
+    document.getElementById('rassurantMessage').textContent = messagesRassurants[Math.floor(Math.random() * messagesRassurants.length)];
+
+    // Types d'urgence
+    document.querySelectorAll('.type-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        alert(`Urgence "${btn.textContent}" signalée. Un conseiller vous contacte immédiatement.`);
+      });
+    });
+
+    // Chat urgent
+    const urgenceForm = document.getElementById('urgenceForm');
+    const urgenceInput = document.getElementById('urgenceInput');
+    const urgenceMessages = document.getElementById('urgenceMessages');
+    const urgenceTyping = document.getElementById('urgenceTyping');
+    const urgenceTimer = document.getElementById('urgenceTimer');
+    let isAnonyme = true;
+
+    document.getElementById('anonymeToggle').addEventListener('change', (e) => isAnonyme = e.target.checked);
+
+    urgenceForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const text = urgenceInput.value.trim();
+      if (!text) return;
+
+      const msg = document.createElement('div');
+      msg.className = 'flex justify-end mb-6';
+      msg.innerHTML = `
+        <div class="bg-primary text-white rounded-3xl px-6 py-4 max-w-lg shadow-lg">
+          <p class="text-lg">${text}</p>
+          <span class="text-sm opacity-80 block mt-2">${isAnonyme ? 'Anonyme' : 'Vous'}</span>
+        </div>
+      `;
+      urgenceMessages.appendChild(msg);
+      urgenceMessages.scrollTop = urgenceMessages.scrollHeight;
+      urgenceInput.value = '';
+
+      urgenceTyping.classList.remove('hidden');
+      let countdown = 30;
+      const timerInterval = setInterval(() => {
+        countdown--;
+        urgenceTimer.textContent = `Réponse estimée dans : ${countdown} secondes`;
+        if (countdown <= 0) clearInterval(timerInterval);
+      }, 1000);
+
+      setTimeout(() => {
+        urgenceTyping.classList.add('hidden');
+        const reply = document.createElement('div');
+        reply.className = 'flex justify-start mb-6';
+        reply.innerHTML = `
+          <div class="bg-gray-100 text-gray-900 rounded-3xl px-6 py-4 max-w-lg shadow-lg">
+            <p class="text-lg">Je suis là. Décrivez-moi ce qui se passe, je vous aide immédiatement.</p>
+            <span class="text-sm text-gray-600 block mt-2">Conseiller urgent</span>
+          </div>
+        `;
+        urgenceMessages.appendChild(reply);
+        urgenceMessages.scrollTop = urgenceMessages.scrollHeight;
+        urgenceTimer.textContent = 'Conseiller connecté !';
+      }, 30000);
+    });
+// Simulateur de respiration 4-7-8 (inspirer 4s, retenir 7s, expirer 8s)
+const breathingCircle = document.getElementById('breathingCircle');
+const breathText = document.getElementById('breathText');
+const breathCount = document.getElementById('breathCount');
+const startBreathingBtn = document.getElementById('startBreathing');
+
+let breathingInterval;
+let isBreathing = false;
+
+function startBreathingExercise() {
+  if (isBreathing) return;
+  isBreathing = true;
+  startBreathingBtn.textContent = "Arrêter l'exercice";
+  startBreathingBtn.classList.replace('bg-primary', 'bg-danger');
+
+  let cycle = 0;
+  breathingInterval = setInterval(() => {
+    cycle++;
+
+    // Inspirez (4s) - cercle grandit
+    if (cycle <= 4) {
+      breathingCircle.style.transform = 'scale(1.5)';
+      breathText.textContent = 'Inspirez';
+      breathCount.textContent = `${cycle} secondes`;
+    }
+    // Retenez (7s) - cercle reste grand
+    else if (cycle <= 11) {
+      breathingCircle.style.transform = 'scale(1.5)';
+      breathText.textContent = 'Retenez';
+      breathCount.textContent = `${cycle - 4} secondes`;
+    }
+    // Expirez (8s) - cercle rétrécit
+    else if (cycle <= 19) {
+      breathingCircle.style.transform = 'scale(1)';
+      breathText.textContent = 'Expirez';
+      breathCount.textContent = `${cycle - 11} secondes`;
+    }
+    // Pause courte avant nouveau cycle
+    else if (cycle === 20) {
+      breathText.textContent = 'Pause';
+      breathCount.textContent = '';
+    }
+    // Reset cycle
+    else {
+      cycle = 0;
+    }
+  }, 1000);
+}
+
+function stopBreathingExercise() {
+  clearInterval(breathingInterval);
+  isBreathing = false;
+  breathingCircle.style.transform = 'scale(1)';
+  breathText.textContent = 'Inspirez';
+  breathCount.textContent = '4 secondes';
+  startBreathingBtn.textContent = "Démarrer l'exercice";
+  startBreathingBtn.classList.replace('bg-danger', 'bg-primary');
+}
+
+startBreathingBtn.addEventListener('click', () => {
+  if (isBreathing) {
+    stopBreathingExercise();
+  } else {
+    startBreathingExercise();
+  }
+});
+    // Notes privées
+    const notesModal = document.getElementById('notesModal');
+    document.getElementById('urgenceNotesBtn').addEventListener('click', () => notesModal.classList.remove('hidden'));
+    document.getElementById('closeNotes').addEventListener('click', () => notesModal.classList.add('hidden'));
+    document.getElementById('saveNote').addEventListener('click', () => {
+      localStorage.setItem('urgenceNote', document.getElementById('noteText').value);
+      alert('Note sauvegardée localement !');
+      notesModal.classList.add('hidden');
+      document.getElementById('noteText').value = '';
+    });
+
+    // Fermer modal au clic dehors
+    notesModal.addEventListener('click', (e) => {
+      if (e.target === notesModal) notesModal.classList.add('hidden');
+    });
+  </script>
+</body>
+</html>
