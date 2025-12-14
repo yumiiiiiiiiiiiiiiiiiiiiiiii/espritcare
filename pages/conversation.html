@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conversation · ESPRIT CARE</title>
+  <link rel="stylesheet" href="../public/scss.css" />
+</head>
+<body class="min-h-screen bg-white text-slate-900 font-inter">
+  <header class="site-header">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-6">
+      <a class="flex items-center gap-2 font-bold tracking-wide text-white text-lg" href="index.html">
+        <span class="w-8 h-8 rounded-full bg-white inline-block overflow-hidden">
+          <img src="../logoesc.jpeg" alt="Logo Esprit Care" class="w-full h-full object-cover">
+        </span>
+        ESPRIT CARE
+      </a>
+      <nav class="hidden md:flex items-center gap-6">
+        <a href="index.html" class="text-white px-3 py-2 rounded hover:bg-white/15 underline underline-offset-4">Accueil</a>
+        <a href="#" class="text-white px-3 py-2 rounded hover:bg-white/15">Mon dossier</a>
+        <a href="#" class="text-white px-3 py-2 rounded hover:bg-white/15">Ressources</a>
+        <a href="#" class="text-white px-3 py-2 rounded hover:bg-white/15">Contact</a>
+      </nav>
+      <a class="inline-flex items-center justify-center h-10 px-5 rounded-lg font-semibold text-white bg-brand hover:bg-brand-dark" href="#">Se Connecter</a>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 py-8">
+    <div class="flex flex-col mb-12">
+      <div class="mb-2">
+        <h1 class="text-2xl font-bold">Conversation avec votre conseiller</h1>
+        <div class="flex items-center gap-2 mt-2 text-sm text-slate-500"><span class="w-2 h-2 rounded-full bg-green-500 inline-block"></span><span>Saif Slim est en ligne</span></div>
+      </div>
+
+      <div class="bg-white border border-slate-200 rounded-xl p-6 min-h-[400px] max-h-[600px] overflow-y-auto">
+        <div class="flex flex-col gap-5">
+          <div class="flex flex-col gap-1">
+            <div class="text-xs text-slate-500">Saif Slim - 20 Nov 2023, 9:01</div>
+            <div class="max-w-[70%] text-sm leading-6 rounded-xl border border-slate-200 bg-slate-200 p-3">Bonjour, comment puis-je vous aider aujourd'hui ? Je suis là pour vous écouter et vous accompagner.</div>
+          </div>
+          <div class="flex flex-col items-end gap-1">
+            <div class="text-xs text-slate-500">Vous - 20 Nov 2023, 9:05</div>
+            <div class="max-w-[70%] text-sm leading-6 rounded-xl bg-brand text-white p-3">Bonjour, je traverse une période difficile avec mes études... J'ai du mal à me concentrer et je stresse beaucoup pour mes examens.</div>
+          </div>
+          <div class="flex flex-col gap-1">
+            <div class="text-xs text-slate-500">Saif Slim - 20 Nov 2023, 9:10</div>
+            <div class="max-w-[70%] text-sm leading-6 rounded-xl border border-slate-200 bg-slate-200 p-3">Je comprends tout à fait. Beaucoup d'étudiants vivent cette situation. Pouvez-vous m'en dire plus sur ce qui vous stresse particulièrement?</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6">
+        <div class="bg-white border border-slate-200 rounded-xl p-3 flex items-center gap-2">
+          <input type="text" placeholder="Écrivez votre message..." class="flex-1 h-10 px-3 text-sm outline-none" />
+          <div class="flex items-center gap-2">
+            <button class="text-xl">📎</button>
+            <button class="text-xl">😊</button>
+            <button class="inline-flex items-center justify-center h-10 px-5 rounded-lg font-semibold text-white bg-brand hover:bg-brand-dark">Envoyer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="w-full bg-white border border-slate-200 rounded-xl p-8 mt-12">
+      <h2 class="text-xl font-bold mb-6">Ressources utiles</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-6 items-start mb-4">
+        <div class="flex flex-col">
+          <div class="flex flex-col gap-4">
+            <a href="#" class="flex items-center gap-3 p-2 rounded hover:bg-slate-50 text-brand text-sm"><span class="text-orange-500 text-lg">⭐</span><span>Guide des démarches académiques</span></a>
+            <a href="#" class="flex items-center gap-3 p-2 rounded hover:bg-slate-50 text-red-500 text-sm"><span class="text-red-500 font-bold text-xs">■</span><span>Contact urgence psychologique</span></a>
+            <a href="#" class="flex items-center gap-3 p-2 rounded hover:bg-slate-50 text-red-500 text-sm"><span class="text-red-500 font-bold text-lg">?</span><span>FAQ Esprit Care</span></a>
+          </div>
+          <div class="flex flex-col gap-3 mt-6 pt-6 border-t border-slate-200">
+            <div class="flex items-center gap-3 text-sm text-slate-600"><span class="text-base">🕐</span><span>Lun-Ven: 8h-18h</span></div>
+            <div class="flex items-center gap-3 text-sm text-slate-600"><span class="text-base">💬</span><span>Réponse sous 2h en heures ouvrées</span></div>
+            <div class="flex items-center gap-3 text-sm text-slate-600"><span class="text-base">📞</span><span>Urgence? Appelez le +216 12 345 679</span></div>
+          </div>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="../together.png" alt="Ensemble, nous avançons plus loin" class="w-[457px] h-[457px] object-cover rounded-full" />
+          <p class="text-sm text-slate-900 -mt-14 text-center">Ensemble, nous avançons plus loin</p>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer bg-slate-900 text-slate-300 mt-16 py-10">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-6">
+      <div>
+        <div class="font-bold text-white mb-3 flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-white inline-block"></span>ESPRIT CARE</div>
+        <div class="flex gap-3 mt-3">
+          <a href="#" class="text-xl">📘</a>
+          <a href="#" class="text-xl">📷</a>
+          <a href="#" class="text-xl">💼</a>
+        </div>
+      </div>
+      <div>
+        <div class="text-slate-200 font-bold mb-2">Navigation</div>
+        <a href="index.html" class="block">Accueil</a>
+        <a href="nouvelle-demande.html" class="block">Demander de l'aide</a>
+        <a href="#" class="block">FAQ</a>
+        <a href="#" class="block">Contact</a>
+      </div>
+      <div>
+        <div class="text-slate-200 font-bold mb-2">Contact</div>
+        <a href="mailto:contact@esprit-care.tn" class="block">contact@esprit-care.tn</a>
+        <a href="tel:+21612345678" class="block">+216 12 345 678</a>
+        <a href="#" class="block">ESPRIT, El Ghazala</a>
+      </div>
+      <div>
+        <div class="text-slate-200 font-bold mb-2">Légal</div>
+        <a href="#" class="block">Confidentialité</a>
+        <a href="#" class="block">Mentions légales</a>
+        <a href="#" class="block">CGU</a>
+      </div>
+    </div>
+    <div class="border-t border-slate-700 pt-5 mt-5 text-center">
+      <p class="text-xs text-slate-400">© 2024 Esprit Care. Tous droits réservés.</p>
+    </div>
+  </footer>
+</body>
+</html>
