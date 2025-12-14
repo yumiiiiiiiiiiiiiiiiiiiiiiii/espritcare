@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Group Chat - Esprit Care</title>
+  <!-- Tailwind CSS compilé (fichier séparé) -->
+  <link rel="stylesheet" href="c:\Users\yomna\Downloads\webf\public\style.css" />
+</head>
+<body class="bg-primary-bg min-h-screen flex flex-col">
+<!-- Header avec couleur personnalisée #404347 -->
+<header class="bg-[#404347] shadow-lg sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <div class="flex items-center gap-10">
+        <a href="#" class="flex items-center gap-4">
+          <img 
+            src="C:\Users\yomna\Downloads\webf\logoesc.jpeg" 
+            alt="ESPRIT CARE Logo" 
+            class="h-12 w-auto object-contain"
+          />
+       <span class="text-2xl font-black text-white">ESPRIT CARE</span>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="C:\Users\yomna\Downloads\webf\pages\index.html" class="text-gray-300 hover:text-white font-medium transition">Accueil</a>
+          <a href="#" class="text-gray-300 hover:text-white font-medium transition">Mon dossier</a>
+          <a href="#" class="text-gray-300 hover:text-white font-medium transition">Ressources</a>
+          <a href="#" class="text-gray-300 hover:text-white font-medium transition">Contact</a>
+        </nav>
+      </div>
+
+      <button class="bg-primary hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-xl shadow-xl hover:shadow-primary/30 transform hover:scale-105 transition duration-300">
+        Se connecter
+      </button>
+    </div>
+  </div>
+</header>
+  <!-- Main Group Chat -->
+  <main class="flex-1 max-w-4xl mx-auto w-full px-4 py-8">
+    <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col h-[80vh] md:h-[85vh] border border-primary-light">
+      <!-- Header du chat -->
+      <div class="bg-primary-light px-6 py-5 flex justify-between items-center flex-wrap gap-4">
+        <div>
+          <h2 class="text-2xl font-bold text-primary">Group Chat</h2>
+          <p class="text-sm text-gray-600 mt-1">12 personnes en ligne</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <label class="flex items-center gap-3 cursor-pointer select-none">
+            <span class="text-gray-700 font-medium">Rester anonyme</span>
+            <input type="checkbox" id="anonymeToggle" checked class="sr-only peer">
+            <div class="w-12 h-6 bg-primary rounded-full relative transition peer-checked:bg-gray-400">
+              <div class="w-5 h-5 bg-white rounded-full absolute top-0.5 left-0.5 transition peer-checked:translate-x-6"></div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <!-- Champ pseudo (caché par défaut) -->
+      <div id="pseudoInput" class="px-6 py-4 bg-primary-light hidden">
+        <input type="text" id="userName" placeholder="Entrez votre prénom (ex: Sarah)" maxlength="20"
+               class="w-full max-w-sm px-4 py-3 border border-primary-light rounded-xl focus:outline-none focus:border-primary">
+      </div>
+
+      <!-- Zone des messages -->
+      <div id="messages" class="flex-1 overflow-y-auto px-6 py-4 space-y-4 bg-primary-bg">
+        <!-- Message autre personne -->
+        <div class="flex justify-start">
+          <div class="bg-gray-100 text-gray-900 rounded-2xl px-5 py-3 max-w-xs lg:max-w-md shadow-sm">
+            <p>Bonjour à tous, je me sens un peu stressé ces derniers temps…</p>
+            <span class="text-xs text-gray-500 block mt-2">Anonyme • 14:28</span>
+          </div>
+        </div>
+
+        <div class="flex justify-start">
+          <div class="bg-gray-100 text-gray-900 rounded-2xl px-5 py-3 max-w-xs lg:max-w-md shadow-sm">
+            <p>Je comprends, moi aussi j’ai eu une période difficile. Parler ici m’aide déjà.</p>
+            <span class="text-xs text-gray-500 block mt-2">Anonyme • 14:30</span>
+          </div>
+        </div>
+
+        <!-- Ton message -->
+        <div class="flex justify-end">
+          <div class="bg-primary text-white rounded-2xl px-5 py-3 max-w-xs lg:max-w-md shadow-sm">
+            <p>Merci à vous, ça fait du bien de ne pas être seul.</p>
+            <span class="text-xs text-purple-100 block mt-2">Vous (Anonyme) • 14:32</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barre d’envoi -->
+      <form id="sendForm" class="border-t border-primary-light bg-white p-4 flex gap-3">
+        <input type="text" id="messageInput" placeholder="Tapez votre message…" required autocomplete="off"
+               class="flex-1 px-5 py-3 border border-primary-light rounded-full focus:outline-none focus:border-primary">
+        <button type="submit" class="bg-primary text-white px-8 py-3 rounded-full font-medium hover:bg-indigo-700 transition shadow-md">
+          Envoyer
+        </button>
+      </form>
+    </div>
+  </main>
+<!-- Footer -->
+  <footer class="bg-slate-900 text-slate-300 mt-24">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+              <img 
+            src="C:\Users\yomna\Downloads\webf\logoesc.jpeg" 
+            alt="ESPRIT CARE Logo" 
+            class="h-12 w-auto object-contain"
+          />
+            <span class="text-2xl font-black text-white font-bold">ESPRIT CARE</span>
+          </div>
+          <p class="text-slate-400">Votre bien-être est notre priorité absolue.</p>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-6">Navigation</h4>
+          <ul class="space-y-3">
+            <li><a href="C:\Users\yomna\Downloads\webf\pages\index.html" class="hover:text-white transition">Accueil</a></li>
+            <li><a href="#" class="hover:text-white transition">Mon dossier</a></li>
+            <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+            <li><a href="#" class="hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-6">Contact</h4>
+          <ul class="space-y-3 text-slate-400">
+            <li>contact@esprit-care.tn</li>
+            <li>+216 71 345 678</li>
+            <li>ESPRIT, El Ghazala</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-6">Légal</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="hover:text-white transition">Politique de confidentialité</a></li>
+            <li><a href="#" class="hover:text-white transition">Mentions légales</a></li>
+            <li><a href="#" class="hover:text-white transition">CGU</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-800 mt-12 pt-8 text-center text-slate-500">
+        © 2025 ESPRIT CARE – Tous droits réservés
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript séparé (tu peux le mettre dans un fichier js/ si tu veux) -->
+  <script>
+    const anonymeToggle = document.getElementById('anonymeToggle');
+    const pseudoInput = document.getElementById('pseudoInput');
+    const userNameInput = document.getElementById('userName');
+    const messages = document.getElementById('messages');
+    const sendForm = document.getElementById('sendForm');
+    const messageInput = document.getElementById('messageInput');
+
+    let isAnonyme = true;
+    let userName = 'Anonyme';
+
+    anonymeToggle.addEventListener('change', () => {
+      isAnonyme = anonymeToggle.checked;
+      pseudoInput.classList.toggle('hidden', isAnonyme);
+      userName = isAnonyme ? 'Anonyme' : (userNameInput.value.trim() || 'Utilisateur');
+    });
+
+    userNameInput.addEventListener('input', () => {
+      userName = userNameInput.value.trim() || 'Utilisateur';
+    });
+
+    sendForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const text = messageInput.value.trim();
+      if (!text) return;
+
+      const now = new Date();
+      const time = now.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+
+      const msgDiv = document.createElement('div');
+      msgDiv.className = 'flex justify-end';
+      msgDiv.innerHTML = `
+        <div class="bg-primary text-white rounded-2xl px-5 py-3 max-w-xs lg:max-w-md shadow-sm">
+          <p>${text}</p>
+          <span class="text-xs text-purple-100 block mt-2">Vous (${isAnonyme ? 'Anonyme' : userName}) • ${time}</span>
+        </div>
+      `;
+      messages.appendChild(msgDiv);
+      messages.scrollTop = messages.scrollHeight;
+      messageInput.value = '';
+    });
+  </script>
+</body>
+</html>

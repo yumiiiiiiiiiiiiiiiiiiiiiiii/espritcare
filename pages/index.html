@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ESPRIT CARE – Espace de communication</title>
+
+  <!-- Ton CSS compilé (généré automatiquement) -->
+  <link rel="stylesheet" href="c:\Users\yomna\Downloads\webf\public\style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+</head>
+<body class="bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50 min-h-screen flex flex-col">
+
+  <!-- Header -->
+<!-- Header avec couleur personnalisée #404347 -->
+<header class="bg-[#404347] shadow-lg sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <div class="flex items-center gap-10">
+        <a href="#" class="flex items-center gap-4">
+          <img 
+            src="C:\Users\yomna\Downloads\webf\logoesc.jpeg" 
+            alt="ESPRIT CARE Logo" 
+            class="h-12 w-auto object-contain"
+          />
+       <span class="text-2xl font-black text-white">ESPRIT CARE</span>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="c:\Users\yomna\Downloads\webf\pages\index.html" class="text-gray-300 hover:text-white font-medium transition">Accueil</a>
+          <a href="#" class="text-gray-300 hover:text-white font-medium transition">Mon dossier</a>
+          <a href="#" class="text-gray-300 hover:text-white font-medium transition">Ressources</a>
+          <a href="#" class="text-gray-300 hover:text-white font-medium transition">Contact</a>
+        </nav>
+      </div>
+
+      <button class="bg-primary hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-xl shadow-xl hover:shadow-primary/30 transform hover:scale-105 transition duration-300">
+        Se connecter
+      </button>
+    </div>
+  </div>
+</header>
+
+  <!-- Hero + Cards -->
+  <main class="flex-1 flex-col items-center justify-center py-16 lg:py-24 px-4">
+    <div class="text-center max-w-4xl mb-16 animate-fade-in">
+      <h1 class="text-5xl lg:text-6xl font-extrabold text-slate-800 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-emerald-600">
+        Espace de communication
+      </h1>
+      <p class="text-xl text-slate-600 leading-relaxed">
+        Choisissez la façon dont vous souhaitez entrer en contact avec la cellule d'écoute.
+      </p>
+    </div>
+
+   <!-- Grille de cartes centrée -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center mx-auto max-w-6xl">
+      <!-- Carte 1 : Appel direct -->
+      <div class="group glass rounded-3xl p-8 text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-4 transition-all duration-500 w-full max-w-sm flex flex-col">
+        <div class="w-24 h-24 mx-auto mb-6 bg-blue-100 rounded-full flex items-center justify-center group-hover:scale-110 transition">
+          <i class="fas fa-phone-alt text-4xl text-primary"></i>
+        </div>
+ 
+        <h3 class="text-2xl font-bold text-slate-800 mb-3">Parlez maintenant</h3>
+        <p class="text-slate-600 mb-8 flex-1">Appel téléphonique immédiat et confidentiel</p>
+        <a href="C:\Users\yomna\Downloads\webf\pages\appel-direct.html" class="block w-full bg-primary hover:bg-blue-700 text-white font-bold py-6 rounded-2xl shadow-lg transform hover:scale-105 transition text-center text-xl">
+    Appel direct
+  </a>
+      </div>
+
+      <!-- Carte 2 : Group Chat -->
+      <div class="group glass rounded-3xl p-8 text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-4 transition-all duration-500 w-full max-w-sm flex flex-col">
+        <div class="w-24 h-24 mx-auto mb-6 bg-purple-100 rounded-full flex items-center justify-center group-hover:scale-110 transition">
+          <i class="fas fa-users text-4xl text-purple"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-slate-800 mb-3">Group Chat</h3>
+        <p class="text-slate-600 mb-8 flex-1">Échangez en temps réel avec la communauté</p>
+      <!-- Rejoindre le groupe -->
+  <a href="C:\Users\yomna\Downloads\webf\pages\group-chat.html" class="block w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-6 rounded-2xl shadow-lg transform hover:scale-105 transition text-center text-xl">
+    Rejoindre le groupe
+  </a>
+      </div>
+
+      <!-- Carte 3 : Chat conseiller -->
+      <div class="group glass rounded-3xl p-8 text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-4 transition-all duration-500 w-full max-w-sm flex flex-col">
+        <div class="w-24 h-24 mx-auto mb-6 bg-emerald-100 rounded-full flex items-center justify-center group-hover:scale-110 transition">
+          <i class="fas fa-comment-medical text-4xl text-success"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-slate-800 mb-3">Chat avec un conseiller</h3>
+        <p class="text-slate-600 mb-8 flex-1">Messagerie instantanée 100 % confidentielle</p>
+        <a href="c:\Users\yomna\Downloads\webf\pages\chat-choice.html" class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-6 rounded-2xl shadow-lg transform hover:scale-105 transition text-center text-xl">
+    Démarrer le chat
+  </a>
+      </div>
+
+      <!-- Carte 4 : Signaler incident -->
+      <div class="group glass rounded-3xl p-8 text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-4 transition-all duration-500 w-full max-w-sm flex flex-col">
+        <div class="w-24 h-24 mx-auto mb-6 bg-red-100 rounded-full flex items-center justify-center group-hover:scale-110 transition">
+          <i class="fas fa-exclamation-triangle text-4xl text-danger"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-slate-800 mb-3">Signaler un incident</h3>
+        <p class="text-slate-600 mb-8 flex-1">Déclarez une situation urgente en toute sécurité</p>
+       <a href="c:\Users\yomna\Downloads\webf\pages\urgences.html" class="block w-full bg-danger hover:bg-red-700 text-white font-bold py-6 rounded-2xl shadow-lg transform hover:scale-105 transition text-center text-xl">
+    Signaler maintenant
+  </a>
+      </div>
+    </div>
+  </div>
+</main>
+
+  <!-- Footer identique -->
+<!-- Footer -->
+  <footer class="bg-slate-900 text-slate-300 mt-24">
+    <div class="max-w-7xl mx-auto px-6 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+              <img 
+            src="logoesc.jpeg" 
+            alt="ESPRIT CARE Logo" 
+            class="h-12 w-auto object-contain"
+          />
+            <span class="text-2xl font-black text-white font-bold">ESPRIT CARE</span>
+          </div>
+          <p class="text-slate-400">Votre bien-être est notre priorité absolue.</p>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-6">Navigation</h4>
+          <ul class="space-y-3">
+            <li><a href="c:\Users\yomna\Downloads\webf\pages\index.html" class="hover:text-white transition">Accueil</a></li>
+            <li><a href="#" class="hover:text-white transition">Mon dossier</a></li>
+            <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+            <li><a href="#" class="hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-6">Contact</h4>
+          <ul class="space-y-3 text-slate-400">
+            <li>contact@esprit-care.tn</li>
+            <li>+216 71 345 678</li>
+            <li>ESPRIT, El Ghazala</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-6">Légal</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="hover:text-white transition">Politique de confidentialité</a></li>
+            <li><a href="#" class="hover:text-white transition">Mentions légales</a></li>
+            <li><a href="#" class="hover:text-white transition">CGU</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-800 mt-12 pt-8 text-center text-slate-500">
+        © 2025 ESPRIT CARE – Tous droits réservés
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
