@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat - Esprit-Care</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="h-full bg-gray-100 flex flex-col">
+<header class="bg-black text-white fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex justify-between items-center h-20">
+
+      <div class="flex items-center">
+        <img src="../assets/img/logo.png" alt="EspritCare" class="h-20 w-auto">
+      </div>
+
+      <nav class="hidden lg:flex items-center space-x-16">
+        <a href="#" class="text-white hover:text-gray-300 text-lg font-medium transition">Home</a>
+        <a href="#" class="text-white hover:text-gray-300 text-lg font-medium transition">About Us</a>
+        <a href="#" class="text-white hover:text-gray-300 text-lg font-medium transition">Services</a>
+        <a href="#" class="text-white hover:text-gray-300 text-lg font-medium transition">Contact</a>
+      </nav>
+
+      <div class="flex items-center space-x-8">
+        <button class="hover:text-gray-300 transition">
+          <i class="fas fa-search text-xl"></i>
+        </button>
+        <button class="hover:text-gray-300 transition">
+          <i class="far fa-user-circle text-3xl"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+  <div class="flex flex-1 pt-20">
+
+    <aside id="sidebar" class="fixed lg:relative inset-y-0 left-0 z-40 w-80 bg-gray-800 text-white transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-in-out pt-20 lg:pt-0">
+      <div class="p-6">
+        <h2 class="text-2xl font-bold mb-6">Historique de chat</h2>
+        <ul class="space-y-4">
+          <li class="bg-gray-700 rounded-lg p-4 hover:bg-gray-600 cursor-pointer">
+            <p class="font-medium">Discussion du 10/12/2025</p>
+            <p class="text-sm text-gray-400">Dernier message il y a 2h</p>
+          </li>
+          <li class="bg-gray-700 rounded-lg p-4 hover:bg-gray-600 cursor-pointer">
+            <p class="font-medium">Discussion du 08/12/2025</p>
+            <p class="text-sm text-gray-400">Stress examens</p>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden lg:hidden"></div>
+
+    <main class="flex-1 flex flex-col bg-gray-50">
+
+      <div class="bg-white shadow-sm p-6 text-center">
+        <h1 class="text-4xl font-bold text-gray-900">Juste parler!!</h1>
+        <div class="mt-4 inline-flex items-center px-6 py-3 bg-blue-500 text-white rounded-full text-lg font-medium">
+          Votre discussion est 100% confidentielle
+        </div>
+      </div>
+
+      <div class="flex-1 overflow-y-auto p-6 space-y-6">
+        <div class="flex items-center space-x-3 text-gray-600">
+          <input type="checkbox" id="anonymous" checked class="w-5 h-5">
+          <label for="anonymous" class="cursor-pointer">Anonyme</label>
+        </div>
+
+        <div class="flex justify-end">
+          <div class="bg-blue-500 text-white px-5 py-3 rounded-2xl max-w-xs lg:max-w-md rounded-br-none">
+            Bonjour [nom] Exprime ce que tu ressens, sans pression
+          </div>
+        </div>
+
+        <div class="flex justify-end">
+          <div class="bg-blue-600 text-white px-5 py-3 rounded-2xl max-w-xs lg:max-w-md rounded-br-none">
+            Je me sens pas bien à cause de mes examens et le stress...
+          </div>
+        </div>
+
+        <div class="flex justify-start">
+          <div class="bg-gray-200 text-gray-800 px-5 py-3 rounded-2xl max-w-xs lg:max-w-md rounded-bl-none">
+            Merci de votre message
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white border-t border-gray-200 p-4">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center space-x-4 w-full sm:w-auto flex-1">
+            <input type="text" placeholder="Taper un message..." class="flex-1 px-5 py-3 border border-gray-300 rounded-full focus:outline-none focus:border-blue-500">
+            <button class="text-blue-600 text-2xl hover:text-blue-700 transition">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+
+          <button class="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full hover:from-purple-700 hover:to-pink-700 transition shadow-md whitespace-nowrap">
+            <i class="fas fa-star text-lg"></i>
+            <a href="evaluationchat.html"><span class="font-medium">Évaluer ce chat</a></span>
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center">
+            <img src="../assets/img/logofoot.png" alt="Esprit-Care" class="h-25">
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-4">Navigation</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#" class="hover:text-white">Accueil</a></li>
+            <li><a href="#" class="hover:text-white">Demander de l’aide</a></li>
+            <li><a href="#" class="hover:text-white">Contact</a></li>
+            <li><a href="#" class="hover:text-white">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li>contact@esprit-care.tn</li>
+            <li>+216 71 234 567</li>
+            <li>ESPRIT, El Ghazala</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-4">Légal</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#" class="hover:text-white">Confidentialité</a></li>
+            <li><a href="#" class="hover:text-white">Mentions légales</a></li>
+            <li><a href="#" class="hover:text-white">CGU</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-10 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+        © 2025 Esprit-Care. Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

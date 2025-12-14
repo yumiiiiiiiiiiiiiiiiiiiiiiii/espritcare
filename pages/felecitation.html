@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bravo ! - Esprit-Care</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body class="bg-gradient-to-b from-blue-50 via-gray-100 to-blue-100 min-h-screen flex flex-col">
+
+
+
+    <header class="bg-black text-white fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex justify-between items-center h-20">
+
+      <div class="flex items-center">
+        <img src="../assets/img/logo.png" alt="EspritCare" class="h-20 w-50">
+      </div>
+
+      <nav class="hidden lg:flex items-center space-x-16">
+        <a href="#" class="text-white hover:text-gray-300 text-lg font-medium transition">Home</a>
+        <a href="#" class="text-white hover:text-gray-300 text-lg font-medium transition">About Us</a>
+        <a href="#" class="text-white hover:text-gray-300 text-lg font-medium transition">Services</a>
+        <a href="#" class="text-white hover:text-gray-300 text-lg font-medium transition">Contact</a>
+      </nav>
+
+      <div class="flex items-center space-x-8">
+        <button class="hover:text-gray-300 transition">
+          <i class="fas fa-search text-xl"></i>
+        </button>
+        <button class="hover:text-gray-300 transition">
+          <i class="far fa-user-circle text-3xl"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<main class="flex-1 pt-32 pb-20 px-6 flex items-center justify-center">
+  <div class="text-center max-w-2xl">
+
+    <h2 class="text-4xl font-light text-blue-600 mb-10 tracking-wide">
+      Félicitations 🎉
+    </h2>
+
+    <h1 class="text-9xl font-black mb-10 leading-none
+               bg-gradient-to-r from-blue-600 via-blue-400 to-indigo-500
+               bg-clip-text text-transparent drop-shadow">
+      Bravo !
+    </h1>
+
+    <p class="text-3xl text-gray-700 mb-20 leading-relaxed">
+      Tu avances chaque jour 💙<br>
+      Continue de croire en toi ✨
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-8">
+
+      <button class="px-10 py-4 border-4 border-blue-600 rounded-full text-2xl font-bold
+                     text-blue-600 hover:bg-blue-600 hover:text-white
+                     transition duration-300 flex items-center gap-4 shadow-lg">
+        <i class="fas fa-share-alt"></i>
+        Partage ton progrès
+      </button>
+
+    </div>
+</main>
+
+<script>
+  confetti({
+    particleCount: 180,
+    spread: 80,
+    origin: { y: 0.6 },
+    colors: ['#3b82f6', '#60a5fa', '#818cf8', '#a5b4fc']
+  });
+
+  setInterval(() => {
+    confetti({
+      particleCount: 40,
+      angle: 90,
+      spread: 50,
+      origin: { x: 0.5, y: 0.9 }
+    });
+  }, 4000);
+</script>
+
+ <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center">
+            <img src="../assets/img/logofoot.png" alt="Esprit-Care" class="h-25">
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-4">Navigation</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#" class="hover:text-white">Accueil</a></li>
+            <li><a href="#" class="hover:text-white">Demander de l’aide</a></li>
+            <li><a href="#" class="hover:text-white">Contact</a></li>
+            <li><a href="#" class="hover:text-white">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li>contact@esprit-care.tn</li>
+            <li>+216 71 234 567</li>
+            <li>ESPRIT, El Ghazala</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold mb-4">Légal</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#" class="hover:text-white">Confidentialité</a></li>
+            <li><a href="#" class="hover:text-white">Mentions légales</a></li>
+            <li><a href="#" class="hover:text-white">CGU</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-10 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+        © 2025 Esprit-Care. Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>
