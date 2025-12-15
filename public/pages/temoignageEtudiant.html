@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Esprit-Care</title>
+  <title>Témoignage - Esprit-Care</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,12 +13,13 @@
     body { font-family: 'Poppins', sans-serif; }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-100 text-gray-800">
+
 <header class="bg-black text-white fixed top-0 left-0 right-0 z-50">
   <div class="max-w-7xl mx-auto px-6">
     <div class="flex justify-between items-center h-20">
       <div class="flex items-center">
-        <img src="../assets/img/logo.png" alt="EspritCare" class="h-20 w-auto">
+        <img src="/public/img/logo.png" alt="EspritCare" class="h-20 w-auto">
       </div>
       <nav class="hidden lg:flex items-center space-x-16">
         <a href="#" class="hover:text-gray-300 text-lg font-medium transition">Home</a>
@@ -38,67 +39,56 @@
   </div>
 </header>
 
-<main class="pt-20"> 
-  <section class="bg-gray-50 py-12 lg:py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div class="text-center lg:text-left">
-          <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-            Nous Sommes là Pour Vous
-          </h1>
-          <p class="mt-6 text-lg text-gray-600">
-            Trouvez le soutien qui vous convient
-          </p>
-          <div class="mt-10 flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
-            <a href="article_temoignages.html" class="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition shadow-lg">
-              <i class="fas fa-book-open mr-3 text-xl"></i> Articles & Témoignages
-            </a>
-            <a href="chat.html" class="inline-flex items-center justify-center px-8 py-4 bg-white border-2 border-blue-600 text-blue-600 rounded-full font-medium hover:bg-blue-50 transition shadow-lg">
-              <i class="fas fa-comment-dots mr-3 text-xl"></i> Juste parler
-            </a>
-          </div>
-          <h2 class="mt-16 text-2xl lg:text-3xl font-bold text-gray-900">
-            Simplifier Votre Accompagnement
-          </h2>
-        </div>
+<main class="pt-24 pb-20 px-6">
+  <div class="max-w-4xl mx-auto">
+    <div class="mb-10">
+      <a href="temoignages.html" class="inline-flex items-center text-gray-600 hover:text-gray-900 text-lg font-medium transition">
+        <i class="fas fa-chevron-left mr-2"></i> Retour aux témoignages
+      </a>
+    </div>
 
-        <div class="flex justify-center">
-          <img src="../assets/img/care.jpg" alt="Illustration de soutien et accompagnement"
-               class="w-full max-w-lg rounded-2xl shadow-2xl object-cover">
-        </div>
-      </div>
+    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12 leading-tight">
+      J’étais perdu, j’ai trouvé<br>ma voie
+    </h1>
 
-      <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition">
-          <div class="w-16 h-16 mx-auto bg-orange-100 rounded-full flex items-center justify-center">
-            <i class="fas fa-exclamation-triangle text-3xl text-orange-600"></i>
-          </div>
-          <h3 class="mt-6 text-xl font-semibold">Signalement Facilité</h3>
-        </div>
-
-        <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition">
-          <div class="w-16 h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center">
-            <i class="fas fa-folder-open text-3xl text-blue-600"></i>
-          </div>
-          <h3 class="mt-6 text-xl font-semibold">Suivi de dossier Centralisé</h3>
-        </div>
-
-        <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition">
-          <div class="w-16 h-16 mx-auto bg-cyan-100 rounded-full flex items-center justify-center">
-            <i class="fas fa-comments text-3xl text-cyan-600"></i>
-          </div>
-          <h3 class="mt-6 text-xl font-semibold">Communication Fluidifiée</h3>
-        </div>
+   <div class="flex flex-col md:flex-row items-center justify-center mb-12 gap-8">
+      <img src="https://www.ey.com/adobe/dynamicmedia/deliver/dm-aid--c48f60bf-42e8-4061-89b2-f37f0b4e22b8/ey-shoan-dsouza-v2.jpg?width=1100&preferwebp=true&quality=85" 
+           alt="Photo de Ahmed" 
+           class="w-32 h-32 rounded-full object-cover shadow-lg">
+      <div class="text-center md:text-left">
+        <p class="text-2xl font-semibold text-gray-900">Par Ahmed</p>
+        <p class="text-lg text-gray-600">Étudiant en ES PRIT TWIN, 24 ans</p>
       </div>
     </div>
-  </section>
+
+    <div class="bg-white rounded-3xl shadow-lg p-10 md:p-14 text-gray-700 text-lg leading-relaxed text-justify max-w-3xl mx-auto mb-16">
+      Avant Esprit-Care, je me sentais vraiment submergé par le stress des études et l’anxiété sociale. 
+      Je prenais rarement du temps pour moi. Grâce aux conseils et aux exercices de relaxation proposés ici, 
+      j’ai appris à mieux respirer, à prioriser mes examens et à parler à un conseiller de confiance. 
+      Ma vie a changé : je suis plus serein, confiant et je profite enfin de mes années étudiantes.
+    </div>
+
+    <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+      <a href="#" class="px-8 py-4 bg-gray-200 text-gray-700 font-medium rounded-full hover:bg-gray-300 transition flex items-center gap-3">
+        <i class="fas fa-chevron-left"></i> Précédent
+      </a>
+
+      <a href="temoignages.html" class="px-10 py-5 bg-blue-600 text-white font-bold text-lg rounded-full hover:bg-blue-700 transition shadow-lg">
+        Découvrir d'autres témoignages
+      </a>
+
+      <a href="#" class="px-8 py-4 bg-gray-200 text-gray-700 font-medium rounded-full hover:bg-gray-300 transition flex items-center gap-3">
+        Suivant <i class="fas fa-chevron-right"></i>
+      </a>
+    </div>
+  </div>
 </main>
 
 <footer class="bg-gray-900 text-white py-12">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid md:grid-cols-4 gap-8">
       <div class="flex items-center justify-center md:justify-start">
-        <img src="../assets/img/logofoot.png" alt="Esprit-Care" class="h-20 w-auto">
+        <img src="/public/img/logofoot.png" alt="Esprit-Care" class="h-20 w-auto">
       </div>
       <div>
         <h4 class="font-semibold mb-4">Navigation</h4>

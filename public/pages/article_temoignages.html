@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Articles & Ressources - Esprit-Care</title>
+  <title>Articles & Témoignages - Esprit-Care</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   
@@ -22,7 +22,7 @@
   <div class="max-w-7xl mx-auto px-6">
     <div class="flex justify-between items-center h-20">
       <div class="flex items-center">
-        <img src="../assets/img/logo.png" alt="EspritCare" class="h-20 w-auto">
+        <img src="/public/img/logo.png" alt="EspritCare" class="h-20 w-auto">
       </div>
       <nav class="hidden lg:flex items-center space-x-16">
         <a href="#" class="hover:text-gray-300 text-lg font-medium transition">Home</a>
@@ -43,63 +43,39 @@
 </header>
 
 <main class="pt-24 pb-20 px-6">
-  <div class="max-w-6xl mx-auto text-center">
-    <h1 class="text-4xl md:text-5xl font-semibold text-gray-900 mb-6">
-      Articles & Ressources
+  <div class="max-w-7xl mx-auto text-center">
+    <h1 class="text-4xl md:text-5xl font-semibold text-gray-900 mb-12">
+      Articles & Témoignages
     </h1>
-    <p class="text-xl text-gray-600 mb-16 max-w-3xl mx-auto font-light leading-relaxed">
-      Explorez nos guides, conseils et articles pour mieux gérer ton quotidien et ton bien-être.
-    </p>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
 
-      <a href="anxiete-examens.html" 
-         class="flex flex-col justify-between h-full bg-white rounded-3xl shadow-xl p-12 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-4 cursor-pointer">
-        <div>
-          <div class="w-32 h-32 mx-auto mb-8 flex items-center justify-center bg-blue-100 rounded-full text-6xl transition transform hover:scale-110">
-            <i class="fas fa-brain text-blue-600"></i>
-          </div>
-          <h3 class="text-2xl font-medium text-gray-900 leading-relaxed mb-8">
-            Gérer l’anxiété<br>avant les examens
-          </h3>
-        </div>
-        <div>
-          <span class="inline-block px-8 py-4 bg-blue-600 text-white text-base font-medium rounded-full hover:bg-blue-700 transition">
-            Lire l’article
+      <a href="article.html" class="block bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-4 cursor-pointer">
+        <img src="/public/img/aaa.jpg" alt="Articles" class="w-full h-72 object-cover">
+        <div class="p-10">
+          <h2 class="text-3xl font-medium text-gray-900 mb-4">
+            Voir nos articles
+          </h2>
+          <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+            Découvrez nos guides et conseils pour mieux comprendre le bien-être et le soutien disponible pour vous.
+          </p>
+          <span class="inline-flex items-center px-8 py-4 bg-blue-600 text-white text-lg font-medium rounded-full hover:bg-blue-700 transition shadow-md">
+            Articles <i class="fas fa-arrow-right ml-3"></i>
           </span>
         </div>
       </a>
 
-      <a href="etudes-academiques.html" 
-         class="flex flex-col justify-between h-full bg-white rounded-3xl shadow-xl p-12 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-4 cursor-pointer">
-        <div>
-          <div class="w-32 h-32 mx-auto mb-8 flex items-center justify-center bg-purple-100 rounded-full text-6xl transition transform hover:scale-110">
-            <i class="fas fa-graduation-cap text-purple-600"></i>
-          </div>
-          <h3 class="text-2xl font-medium text-gray-900 mb-8">
-            Études académiques
-          </h3>
-        </div>
-        <div>
-          <span class="inline-block px-8 py-4 bg-blue-600 text-white text-base font-medium rounded-full hover:bg-blue-700 transition">
-            Lire l’article
-          </span>
-        </div>
-      </a>
-
-      <a href="antistress.html" 
-         class="flex flex-col justify-between h-full bg-white rounded-3xl shadow-xl p-12 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-4 cursor-pointer">
-        <div>
-          <div class="w-32 h-32 mx-auto mb-8 flex items-center justify-center bg-green-100 rounded-full text-6xl transition transform hover:scale-110">
-            <i class="fas fa-heartbeat text-green-600"></i>
-          </div>
-          <h3 class="text-2xl font-medium text-gray-900 mb-8">
-            Gestion du stress
-          </h3>
-        </div>
-        <div>
-          <span class="inline-block px-8 py-4 bg-blue-600 text-white text-base font-medium rounded-full hover:bg-blue-700 transition">
-            Lire l’article
+      <a href="temoignages.html" class="block bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-4 cursor-pointer">
+        <img src="/public/img/Lapis.jpg" alt="Témoignages" class="w-full h-72 object-cover">
+        <div class="p-10">
+          <h2 class="text-3xl font-medium text-gray-900 mb-4">
+            Voir les témoignages
+          </h2>
+          <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+            Lisez les expériences d’autres personnes qui ont trouvé du soutien grâce à Esprit-Care.
+          </p>
+          <span class="inline-flex items-center px-8 py-4 bg-blue-600 text-white text-lg font-medium rounded-full hover:bg-blue-700 transition shadow-md">
+            Témoignages <i class="fas fa-arrow-right ml-3"></i>
           </span>
         </div>
       </a>
@@ -112,7 +88,7 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid md:grid-cols-4 gap-8">
       <div class="flex items-center justify-center md:justify-start">
-        <img src="../assets/img/logofoot.png" alt="Esprit-Care" class="h-20 w-auto">
+        <img src="/public/img/logofoot.png" alt="Esprit-Care" class="h-20 w-auto">
       </div>
       <div>
         <h4 class="font-semibold mb-4">Navigation</h4>
