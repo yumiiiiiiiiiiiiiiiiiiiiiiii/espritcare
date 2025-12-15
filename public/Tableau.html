@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Suivi - ESPRIT CARE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-gray-800 text-white">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                    <span class="text-gray-800 font-bold text-sm">E</span>
+                </div>
+                <span class="font-semibold">ESPRIT CARE</span>
+            </div>
+            <nav class="flex gap-6 text-sm">
+                <a href="#" class="hover:text-gray-300">Accueil</a>
+                <a href="#" class="hover:text-gray-300">Mon dossier</a>
+                <a href="#" class="hover:text-gray-300">Ressources</a>
+                <a href="#" class="hover:text-gray-300">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="container mx-auto px-4 py-6">
+        <div class="flex items-center gap-2 text-sm text-gray-600">
+            <a href="#" class="hover:text-gray-900">Accueil</a>
+            <span>›</span>
+            <a href="#" class="hover:text-gray-900">Mon dossier</a>
+            <span>›</span>
+            <span class="text-gray-900">Tableau de suivi</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 pb-12">
+        <h1 class="text-3xl font-semibold text-center text-gray-800 mb-12">Tableau de Suivi</h1>
+
+        <!-- Search Bar -->
+        <div class="flex justify-end mb-6">
+            <div class="relative w-64">
+                <input type="text" placeholder="search" class="w-full px-4 py-2 pr-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="space-y-4">
+            <!-- Row 1 -->
+            <div class="grid grid-cols-3 gap-4">
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-medium text-gray-900">Absence deux semaines</h3>
+                        <span class="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded">Status</span>
+                    </div>
+                    <p class="text-sm text-gray-500">26/09/2024</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-medium text-gray-900">Note CC "integration web"</h3>
+                        <span class="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded">Status</span>
+                    </div>
+                    <p class="text-sm text-gray-500">16/03/2025</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-medium text-gray-900">Repassage DS "Dev ops"</h3>
+                        <span class="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded">Status</span>
+                    </div>
+                    <p class="text-sm text-gray-500">22/05/2025</p>
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="grid grid-cols-3 gap-4">
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-medium text-gray-900">Absence deux semaines</h3>
+                        <span class="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded">Status</span>
+                    </div>
+                    <p class="text-sm text-gray-500">26/09/2024</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-medium text-gray-900">Note CC "integration web"</h3>
+                        <span class="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded">Status</span>
+                    </div>
+                    <p class="text-sm text-gray-500">23/05/2025</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-medium text-gray-900">Repassage DS "Dev ops"</h3>
+                        <span class="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded">Status</span>
+                    </div>
+                    <p class="text-sm text-gray-500">23/05/2025</p>
+                </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="grid grid-cols-3 gap-4">
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-medium text-gray-900">Absence deux semaines</h3>
+                        <span class="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded">Status</span>
+                    </div>
+                    <p class="text-sm text-gray-500">26/09/2024</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-medium text-gray-900">Note CC "integration web"</h3>
+                        <span class="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded">Status</span>
+                    </div>
+                    <p class="text-sm text-gray-500">16/03/2025</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="font-medium text-gray-900">Repassage DS "Dev ops"</h3>
+                        <span class="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded">Status</span>
+                    </div>
+                    <p class="text-sm text-gray-500">22/05/2025</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-16">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-semibold mb-4">ESPRIT CARE</h3>
+                    <div class="flex gap-4">
+                        <a href="#" class="hover:text-gray-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        </a>
+                        <a href="#" class="hover:text-gray-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        </a>
+                        <a href="#" class="hover:text-gray-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm-1-7.9c-.7 0-1.2-.5-1.2-1.2s.5-1.2 1.2-1.2 1.2.5 1.2 1.2-.5 1.2-1.2 1.2zM17 17h-2v-3.4c0-.8-.7-1.5-1.5-1.5s-1.5.7-1.5 1.5V17h-2v-7h2v1c.5-.8 1.5-1.3 2.5-1.3 1.9 0 3.5 1.6 3.5 3.5V17z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-3">Navigation</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white">Accueil</a></li>
+                        <li><a href="#" class="hover:text-white">Paramètre de l'outil</a></li>
+                        <li><a href="#" class="hover:text-white">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-3">Contact</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li>Contact@esprit-care.tn</li>
+                        <li>+216 12 345 678</li>
+                        <li>Esprit, El Ghazela</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-3">Légal</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white">Confidentialité</a></li>
+                        <li><a href="#" class="hover:text-white">Mentions légales</a></li>
+                        <li><a href="#" class="hover:text-white">CGU</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

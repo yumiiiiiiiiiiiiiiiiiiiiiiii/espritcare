@@ -2,36 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Tes classes personnalisées */
-@layer components {
-  .glass {
-    @apply bg-white/85 backdrop-blur-xl border border-white/30;
-  }
-
-}
-
-/* Animations personnalisées */
-  .site-header {
-    background: #6DD6A6;
-  }
-  .brand, .menu a {
-    color: #fff;
-  }
-
-@keyframes wave {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
-}
-.wave-bars > span {
-  @apply inline-block w-1.5 bg-primary mx-0.5 rounded;
-  animation: wave 1.5s ease-in-out infinite;
-}
-.wave-bars > span:nth-child(1) { height: 20px; animation-delay: 0s; }
-.wave-bars > span:nth-child(2) { height: 40px; animation-delay: 0.1s; }
-.wave-bars > span:nth-child(3) { height: 60px; animation-delay: 0.2s; }
-.wave-bars > span:nth-child(4) { height: 40px; animation-delay: 0.3s; }
-
-.wave-bars > span:nth-child(5) { height: 20px; animation-delay: 0.4s; }
-
-.wave-bars > span:nth-child(5) { height: 20px; animation-delay: 0.4s; }
-.wave-bars > span:nth-child(6) { height: 40px; animation-delay: 0.5s; }
