@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nouvelle demande · ESPRIT CARE</title>
+  <!-- Tailwind CSS CDN + couleurs personnalisées -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../public/scss.css" />
+</head>
+<body class="min-h-screen bg-white text-slate-900 font-inter">
+ <header class="bg-black text-white fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex justify-between items-center h-20">
+      <div class="flex items-center">
+        <img src="../assets/img/logo.png" alt="EspritCare" class="h-20 w-auto">
+      </div>
+      <nav class="hidden lg:flex items-center space-x-16">
+        <a href="#" class="hover:text-gray-300 text-lg font-medium transition">Home</a>
+        <a href="#" class="hover:text-gray-300 text-lg font-medium transition">About Us</a>
+        <a href="#" class="hover:text-gray-300 text-lg font-medium transition">Services</a>
+        <a href="#" class="hover:text-gray-300 text-lg font-medium transition">Contact</a>
+      </nav>
+      <div class="flex items-center space-x-8">
+        <button class="hover:text-gray-300 transition">
+          <i class="fas fa-search text-xl"></i>
+        </button>
+        <button class="hover:text-gray-300 transition">
+          <i class="far fa-user-circle text-3xl"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <main class="max-w-7xl mx-auto px-6 py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-12 items-start">
+      <div>
+        <h1 class="text-2xl font-bold mb-8">Nouvelle demande d'aide</h1>
+        <form class="flex flex-col gap-6" action="#" method="post">
+          <label class="flex flex-col gap-3">
+            <span class="font-semibold text-sm">Choisir un type</span>
+            <select name="type" required class="w-full h-12 px-3 border border-slate-200 rounded-xl text-sm bg-white text-slate-900 focus:border-brand">
+              <option value="">Sélectionner un type</option>
+              <option value="academique">Académique</option>
+              <option value="personnel">Personnel</option>
+              <option value="financier">Financier</option>
+              <option value="autre">Autre</option>
+            </select>
+          </label>
+          <label class="flex flex-col gap-3">
+            <span class="font-semibold text-sm">Décrivez votre situation...</span>
+            <textarea rows="8" placeholder="Décrivez votre situation..." class="w-full min-h-[120px] p-3 border border-slate-200 rounded-xl text-sm outline-none resize-y"></textarea>
+          </label>
+          <label class="m-0">
+            <div class="relative border-2 border-dashed border-slate-200 rounded-xl p-8 text-center cursor-pointer transition bg-slate-50 hover:border-brand hover:bg-blue-50">
+              <span class="text-2xl block mb-2">📎</span>
+              <span class="text-sm text-slate-500 block">Glissez vos fichiers ici ou cliquez pour parcourir</span>
+              <input type="file" multiple class="absolute inset-0 opacity-0 cursor-pointer w-full h-full" />
+            </div>
+          </label>
+          <div class="flex justify-center mt-2">
+            <button class="inline-flex items-center justify-center h-10 px-5 rounded-lg font-semibold text-white bg-brand hover:bg-brand-dark" type="submit">Envoyer ma demande</button>
+          </div>
+        </form>
+      </div>
+      <div class="sticky lg:top-8 flex flex-col items-center gap-6">
+        <div class="w-[300px] h-[300px] flex items-center justify-center">
+          <img src="../hands.jpg" alt="Se relever ensemble" class="w-full h-full object-cover rounded-full" />
+        </div>
+        <p class="text-base font-medium text-center">Se relever, ensemble.</p>
+      </div>
+    </div>
+  </main>
+
+ 
+<footer class="bg-gray-900 text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-4 gap-8">
+      <div class="flex items-center justify-center md:justify-start">
+        <img src="../assets/img/logofoot.png" alt="Esprit-Care" class="h-20 w-auto">
+      </div>
+      <div>
+        <h4 class="font-semibold mb-4">Navigation</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li><a href="#" class="hover:text-white">Accueil</a></li>
+          <li><a href="#" class="hover:text-white">Demander de l’aide</a></li>
+          <li><a href="#" class="hover:text-white">Contact</a></li>
+          <li><a href="#" class="hover:text-white">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-4">Contact</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li>contact@esprit-care.tn</li>
+          <li>+216 71 234 567</li>
+          <li>ESPRIT, El Ghazala</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-4">Légal</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li><a href="#" class="hover:text-white">Confidentialité</a></li>
+          <li><a href="#" class="hover:text-white">Mentions légales</a></li>
+          <li><a href="#" class="hover:text-white">CGU</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-10 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+      © 2025 Esprit-Care. Tous droits réservés.
+    </div>
+  </div>
+</footer>
+</body>
+</html>

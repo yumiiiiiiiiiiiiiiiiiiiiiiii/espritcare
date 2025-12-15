@@ -1,31 +1,35 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-<<<<<<< HEAD
   content: [
-    "./pages/**/*.{html,js}",
     "./*.html",
+    "./pages/**/*.{html,js}",
     "./src/**/*.{html,js,scss}"
   ],
   theme: {
     extend: {
-      colors: {
-        primary: '#2563eb',
-=======
-  content: ["./*.html", "./src/**/*.{html,js}"],
-  theme: {
-    extend: {
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+        sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica", "Arial", "sans-serif"]
       },
       colors: {
-        primary: '#2563eb',
-        danger: '#dc2626',
-        success: '#059669',
-        purple: '#9333ea',
-        header: '#404347',
->>>>>>> origin/Communication
+        primary: "#2563eb",     // Bleu principal utilisé dans le projet
+        brand: {
+          DEFAULT: "#3A8DFF",
+          dark: "#2563EB"
+        },
+        danger: "#dc2626",
+        success: "#059669",
+        purple: "#9333ea",
+        header: "#404347"
       },
-    },
+      fontSize: {
+        xs: "12px",
+        sm: "14px",
+        base: "16px",
+        lg: "18px",
+        xl: "24px",
+        "2xl": "32px"
+      }
+    }
   },
-  plugins: [],
-}
+  plugins: []
+};

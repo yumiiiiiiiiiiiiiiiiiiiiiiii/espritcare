@@ -1,30 +1,35 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ma Progression - Esprit-Care</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
 </head>
 
-<body class="bg-gray-100 min-h-screen flex flex-col">
+<body class="bg-gray-100 text-gray-800">
 
 <header class="bg-black text-white fixed top-0 left-0 right-0 z-50">
   <div class="max-w-7xl mx-auto px-6">
     <div class="flex justify-between items-center h-20">
-
       <div class="flex items-center">
-        <img src="../assets/img/logo.png" alt="EspritCare" class="h-20 w-50">
+        <img src="../assets/img/logo.png" alt="EspritCare" class="h-20 w-auto">
       </div>
-
       <nav class="hidden lg:flex items-center space-x-16">
-        <a href="#" class="text-white hover:text-gray-300 text-lg font-medium transition">Home</a>
-        <a href="#" class="text-white hover:text-gray-300 text-lg font-medium transition">About Us</a>
-        <a href="#" class="text-white hover:text-gray-300 text-lg font-medium transition">Services</a>
-        <a href="#" class="text-white hover:text-gray-300 text-lg font-medium transition">Contact</a>
+        <a href="#" class="hover:text-gray-300 text-lg font-medium transition">Home</a>
+        <a href="#" class="hover:text-gray-300 text-lg font-medium transition">About Us</a>
+        <a href="#" class="hover:text-gray-300 text-lg font-medium transition">Services</a>
+        <a href="#" class="hover:text-gray-300 text-lg font-medium transition">Contact</a>
       </nav>
-
       <div class="flex items-center space-x-8">
         <button class="hover:text-gray-300 transition">
           <i class="fas fa-search text-xl"></i>
@@ -33,137 +38,132 @@
           <i class="far fa-user-circle text-3xl"></i>
         </button>
       </div>
-
     </div>
   </div>
 </header>
-<main class="flex-1 pt-32 pb-20 px-6">
-<div class="max-w-6xl mx-auto">
 
-<h1 class="text-5xl font-bold text-gray-900 text-center mb-4">
-  Vue de l’évolution de votre progression
-</h1>
-<p class="text-center text-gray-600 text-lg mb-12">
-  On a tous des hauts et des bas. Chaque émotion compte 🤍
-</p>
+<main class="pt-24 pb-20 px-6">
+  <div class="max-w-6xl mx-auto">
 
-<div class="relative h-96 mb-20">
+    <h1 class="text-4xl md:text-5xl font-semibold text-gray-900 text-center mb-6">
+      Vue de l’évolution de votre progression
+    </h1>
+    <p class="text-center text-gray-600 text-lg mb-16 font-light">
+      On a tous des hauts et des bas. Chaque émotion compte 🤍
+    </p>
 
-  <div class="absolute left-0 top-6 flex flex-col justify-between h-full text-4xl">
-    <div>😄</div>
-    <div>🙂</div>
-    <div>😐</div>
-    <div>😔</div>
-    <div>😢</div>
+    <div class="relative bg-white rounded-3xl shadow-xl p-10 mb-20">
+      <div class="absolute left-10 top-12 flex flex-col justify-between h-80 text-5xl">
+        <div>😄</div>
+        <div>🙂</div>
+        <div>😐</div>
+        <div>😔</div>
+        <div>😢</div>
+      </div>
+
+      <svg viewBox="0 0 1000 450" class="w-full h-96">
+        <line x1="140" y1="70" x2="920" y2="70" stroke="#e5e7eb" stroke-width="2"/>
+        <line x1="140" y1="160" x2="920" y2="160" stroke="#e5e7eb" stroke-width="2"/>
+        <line x1="140" y1="250" x2="920" y2="250" stroke="#e5e7eb" stroke-width="2"/>
+        <line x1="140" y1="340" x2="920" y2="340" stroke="#e5e7eb" stroke-width="2"/>
+        <line x1="140" y1="430" x2="920" y2="430" stroke="#e5e7eb" stroke-width="2"/>
+
+        <path d="M160 410 L240 370 L320 330 L400 350 L480 270 L560 220 L640 180 L720 140 L800 120"
+              fill="none" stroke="#3b82f6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+        <circle cx="160" cy="410" r="10" fill="#3b82f6"/>
+        <circle cx="240" cy="370" r="10" fill="#3b82f6"/>
+        <circle cx="320" cy="330" r="10" fill="#3b82f6"/>
+        <circle cx="400" cy="350" r="10" fill="#3b82f6"/>
+        <circle cx="480" cy="270" r="10" fill="#3b82f6"/>
+        <circle cx="560" cy="220" r="10" fill="#3b82f6"/>
+        <circle cx="640" cy="180" r="10" fill="#3b82f6"/>
+        <circle cx="720" cy="140" r="10" fill="#3b82f6"/>
+        <circle cx="800" cy="120" r="16" fill="#3b82f6" stroke="#fff" stroke-width="6"/>
+
+        <text x="160" y="460" text-anchor="middle" class="fill-gray-600 text-base font-medium">Lun</text>
+        <text x="320" y="460" text-anchor="middle" class="fill-gray-600 text-base font-medium">Mer</text>
+        <text x="480" y="460" text-anchor="middle" class="fill-gray-600 text-base font-medium">Ven</text>
+        <text x="640" y="460" text-anchor="middle" class="fill-gray-600 text-base font-medium">Dim</text>
+        <text x="800" y="460" text-anchor="middle" class="fill-gray-900 text-lg font-semibold">Aujourd’hui</text>
+      </svg>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-20">
+
+      <div class="bg-white rounded-3xl shadow-xl p-10 text-center hover:-translate-y-3 transition duration-300">
+        <div class="text-8xl mb-6">😐</div>
+        <h3 class="text-2xl font-medium text-gray-900 mb-2">Aujourd’hui</h3>
+        <p class="text-gray-500 mb-4">15:30</p>
+        <p class="text-xl font-semibold text-blue-600">Sensation : Stable</p>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow-xl p-10 text-center hover:-translate-y-3 transition duration-300">
+        <div class="text-8xl mb-6">😔</div>
+        <h3 class="text-2xl font-medium text-gray-900 mb-2">Hier</h3>
+        <p class="text-gray-500 mb-4">19:00</p>
+        <p class="text-xl font-semibold text-red-500">Sensation : Triste</p>
+      </div>
+
+      <div class="bg-white rounded-3xl shadow-xl p-10 text-center hover:-translate-y-3 transition duration-300">
+        <div class="text-8xl mb-6">🙂</div>
+        <h3 class="text-2xl font-medium text-gray-900 mb-2">Dernière amélioration</h3>
+        <p class="text-xl font-semibold text-green-600 mt-6">Sensation : Bien</p>
+      </div>
+
+    </div>
+
+    <div class="text-center space-y-6 md:space-y-0 md:space-x-10">
+      <a href="#" class="text-blue-600 hover:underline text-lg font-medium">
+        Voir l’historique complet
+      </a>
+      <a href="felecitation.html" class="inline-block">
+        <button class="px-12 py-5 bg-blue-600 text-white text-2xl font-semibold rounded-full hover:bg-blue-700 transition shadow-2xl transform hover:scale-105">
+          Célébrer mon parcours 🎉
+        </button>
+      </a>
+    </div>
+
   </div>
-
-  <svg viewBox="0 0 900 400" class="w-full h-full">
-    <line x1="120" y1="60" x2="850" y2="60" stroke="#e5e7eb" stroke-width="2"/>
-    <line x1="120" y1="140" x2="850" y2="140" stroke="#e5e7eb" stroke-width="2"/>
-    <line x1="120" y1="220" x2="850" y2="220" stroke="#e5e7eb" stroke-width="2"/>
-    <line x1="120" y1="300" x2="850" y2="300" stroke="#e5e7eb" stroke-width="2"/>
-    <line x1="120" y1="380" x2="850" y2="380" stroke="#e5e7eb" stroke-width="2"/>
-
-    <path d="M140 360 L220 320 L300 280 L380 300 L460 220 L540 170 L620 130 L700 90 L780 70"
-          fill="none" stroke="#3b82f6" stroke-width="6" stroke-linecap="round"/>
-
-    <circle cx="140" cy="360" r="9" fill="#3b82f6"/>
-    <circle cx="220" cy="320" r="9" fill="#3b82f6"/>
-    <circle cx="300" cy="280" r="9" fill="#3b82f6"/>
-    <circle cx="380" cy="300" r="9" fill="#3b82f6"/>
-    <circle cx="460" cy="220" r="9" fill="#3b82f6"/>
-    <circle cx="540" cy="170" r="9" fill="#3b82f6"/>
-    <circle cx="620" cy="130" r="9" fill="#3b82f6"/>
-    <circle cx="700" cy="90" r="9" fill="#3b82f6"/>
-    <circle cx="780" cy="70" r="14" fill="#3b82f6" stroke="#fff" stroke-width="5"/>
-
-    <text x="140" y="395" text-anchor="middle" class="fill-gray-600 text-sm">Lun</text>
-    <text x="300" y="395" text-anchor="middle" class="fill-gray-600 text-sm">Mer</text>
-    <text x="460" y="395" text-anchor="middle" class="fill-gray-600 text-sm">Ven</text>
-    <text x="620" y="395" text-anchor="middle" class="fill-gray-600 text-sm">Dim</text>
-    <text x="780" y="395" text-anchor="middle" class="fill-gray-800 font-bold">Aujourd’hui</text>
-  </svg>
-</div>
-
-<div class="grid md:grid-cols-3 gap-10 mb-20">
-
-<!-- Card 1 -->
-<div class="bg-white rounded-3xl shadow-xl p-10 text-center hover:-translate-y-2 transition">
-  <div class="text-7xl mb-4">😐</div>
-  <h3 class="text-2xl font-bold text-gray-800">Aujourd’hui</h3>
-  <p class="text-gray-500">15:30</p>
-  <p class="mt-3 text-lg font-semibold text-blue-600">Sensation : Stable</p>
-</div>
-
-<div class="bg-white rounded-3xl shadow-xl p-10 text-center hover:-translate-y-2 transition">
-  <div class="text-7xl mb-4">😔</div>
-  <h3 class="text-2xl font-bold text-gray-800">Hier</h3>
-  <p class="text-gray-500">19:00</p>
-  <p class="mt-3 text-lg font-semibold text-red-500">Sensation : Triste</p>
-</div>
-
-<div class="bg-white rounded-3xl shadow-xl p-10 text-center hover:-translate-y-2 transition">
-  <div class="text-7xl mb-4">🙂</div>
-  <h3 class="text-2xl font-bold text-gray-800">Dernière amélioration</h3>
-  <p class="mt-3 text-lg font-semibold text-green-600">Sensation : Bien</p>
-</div>
-
-</div>
-
-<div class="text-center">
-  <a href="#" class="text-blue-600 hover:underline text-lg mr-10">
-    Voir l’historique complet
-  </a>
-  <a href="felecitation.html"><button class="px-10 py-4 bg-blue-600 text-white text-2xl font-bold rounded-full hover:bg-blue-700 transition shadow-xl hover:scale-105">
-    Célébrer mon parcours 🎉
-  </button></a>
-</div>
-
-</div>
 </main>
 
-  <footer class="bg-gray-900 text-white py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-4 gap-8">
-        <div>
-          <div class="flex items-center">
-            <img src="../assets/img/logofoot.png" alt="Esprit-Care" class="h-25">
-          </div>
-        </div>
-
-        <div>
-          <h4 class="font-semibold mb-4">Navigation</h4>
-          <ul class="space-y-2 text-gray-400">
-            <li><a href="#" class="hover:text-white">Accueil</a></li>
-            <li><a href="#" class="hover:text-white">Demander de l’aide</a></li>
-            <li><a href="#" class="hover:text-white">Contact</a></li>
-            <li><a href="#" class="hover:text-white">FAQ</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="font-semibold mb-4">Contact</h4>
-          <ul class="space-y-2 text-gray-400">
-            <li>contact@esprit-care.tn</li>
-            <li>+216 71 234 567</li>
-            <li>ESPRIT, El Ghazala</li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="font-semibold mb-4">Légal</h4>
-          <ul class="space-y-2 text-gray-400">
-            <li><a href="#" class="hover:text-white">Confidentialité</a></li>
-            <li><a href="#" class="hover:text-white">Mentions légales</a></li>
-            <li><a href="#" class="hover:text-white">CGU</a></li>
-          </ul>
-        </div>
+<footer class="bg-gray-900 text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-4 gap-8">
+      <div class="flex items-center justify-center md:justify-start">
+        <img src="../assets/img/logofoot.png" alt="Esprit-Care" class="h-20 w-auto">
       </div>
-
-      <div class="mt-10 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
-        © 2025 Esprit-Care. Tous droits réservés.
+      <div>
+        <h4 class="font-semibold mb-4">Navigation</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li><a href="#" class="hover:text-white">Accueil</a></li>
+          <li><a href="#" class="hover:text-white">Demander de l’aide</a></li>
+          <li><a href="#" class="hover:text-white">Contact</a></li>
+          <li><a href="#" class="hover:text-white">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-4">Contact</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li>contact@esprit-care.tn</li>
+          <li>+216 71 234 567</li>
+          <li>ESPRIT, El Ghazala</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-4">Légal</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li><a href="#" class="hover:text-white">Confidentialité</a></li>
+          <li><a href="#" class="hover:text-white">Mentions légales</a></li>
+          <li><a href="#" class="hover:text-white">CGU</a></li>
+        </ul>
       </div>
     </div>
-  </footer>
+    <div class="mt-10 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+      © 2025 Esprit-Care. Tous droits réservés.
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>

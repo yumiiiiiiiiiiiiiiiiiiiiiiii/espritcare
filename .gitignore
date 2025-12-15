@@ -1,5 +1,27 @@
+# Dépendances
 node_modules/
-package-lock.json
+
+# Fichiers de lock (à discuter dans l'équipe, mais souvent on ignore pour éviter conflits)
+# package-lock.json
+
+# Fichiers environnement
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Builds et sorties
 dist/
 build/
+public/scss.css
+public/scss.css.map
+src/tw.css
+
+# Éditeur / IDE
+.vscode/
+.idea/
+
+# Système
+.DS_Store
+Thumbs.db

@@ -1,165 +1,188 @@
-<!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
+
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ESPRIT CARE – Espace de communication</title>
-
-  <!-- Ton CSS compilé (généré automatiquement) -->
-  <link rel="stylesheet" href="c:\Users\yomna\Downloads\webf\public\style.css" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Espace Récupération de Documents · ESPRIT CARE</title>
+  <!-- Tailwind CSS CDN + couleurs personnalisées -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../public/scss.css" />
 </head>
-<body class="bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50 min-h-screen flex flex-col">
-
-  <!-- Header -->
-<!-- Header avec couleur personnalisée #404347 -->
-<header class="bg-[#404347] shadow-lg sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
-      <div class="flex items-center gap-10">
-        <a href="#" class="flex items-center gap-4">
-          <img 
-            src="C:\Users\yomna\Downloads\webf\logoesc.jpeg" 
-            alt="ESPRIT CARE Logo" 
-            class="h-12 w-auto object-contain"
-          />
-       <span class="text-2xl font-black text-white">ESPRIT CARE</span>
-        </a>
-
-        <nav class="hidden lg:flex items-center gap-8">
-          <a href="c:\Users\yomna\Downloads\webf\pages\index.html" class="text-gray-300 hover:text-white font-medium transition">Accueil</a>
-          <a href="#" class="text-gray-300 hover:text-white font-medium transition">Mon dossier</a>
-          <a href="#" class="text-gray-300 hover:text-white font-medium transition">Ressources</a>
-          <a href="#" class="text-gray-300 hover:text-white font-medium transition">Contact</a>
-        </nav>
+<body class="min-h-screen bg-white text-slate-900 font-inter">
+  <header class="bg-black text-white fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex justify-between items-center h-20">
+      <div class="flex items-center">
+        <img src="../assets/img/logo.png" alt="EspritCare" class="h-20 w-auto">
       </div>
-
-      <button class="bg-primary hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-xl shadow-xl hover:shadow-primary/30 transform hover:scale-105 transition duration-300">
-        Se connecter
-      </button>
+      <nav class="hidden lg:flex items-center space-x-16">
+        <a href="#" class="hover:text-gray-300 text-lg font-medium transition">Home</a>
+        <a href="#" class="hover:text-gray-300 text-lg font-medium transition">About Us</a>
+        <a href="#" class="hover:text-gray-300 text-lg font-medium transition">Services</a>
+        <a href="#" class="hover:text-gray-300 text-lg font-medium transition">Contact</a>
+      </nav>
+      <div class="flex items-center space-x-8">
+        <button class="hover:text-gray-300 transition">
+          <i class="fas fa-search text-xl"></i>
+        </button>
+        <button class="hover:text-gray-300 transition">
+          <i class="far fa-user-circle text-3xl"></i>
+        </button>
+      </div>
     </div>
   </div>
 </header>
 
-  <!-- Hero + Cards -->
-  <main class="flex-1 flex-col items-center justify-center py-16 lg:py-24 px-4">
-    <div class="text-center max-w-4xl mb-16 animate-fade-in">
-      <h1 class="text-5xl lg:text-6xl font-extrabold text-slate-800 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-emerald-600">
-        Espace de communication
-      </h1>
-      <p class="text-xl text-slate-600 leading-relaxed">
-        Choisissez la façon dont vous souhaitez entrer en contact avec la cellule d'écoute.
-      </p>
+  <main class="max-w-7xl mx-auto px-6 py-8">
+    <div class="mb-8">
+      <h1 class="text-[32px] font-bold text-slate-900">Espace Récupération de Documents</h1>
+      <p class="text-sm text-slate-500">Téléchargez vos documents académiques en toute sécurité</p>
     </div>
 
-   <!-- Grille de cartes centrée -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center mx-auto max-w-6xl">
-      <!-- Carte 1 : Appel direct -->
-      <div class="group glass rounded-3xl p-8 text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-4 transition-all duration-500 w-full max-w-sm flex flex-col">
-        <div class="w-24 h-24 mx-auto mb-6 bg-blue-100 rounded-full flex items-center justify-center group-hover:scale-110 transition">
-          <i class="fas fa-phone-alt text-4xl text-primary"></i>
+    <div class="flex items-center h-12 rounded-xl border border-slate-200 bg-white px-4 mb-10 shadow-sm">
+      <input type="text" placeholder="Rechercher un document..." class="flex-1 bg-transparent outline-none text-sm placeholder:text-slate-400" />
+      <button class="text-lg text-slate-500">🔍</button>
+    </div>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+      <article class="rounded-xl border border-slate-200 bg-white shadow-sm p-6 flex flex-col gap-4">
+        <div class="w-12 h-12 rounded-lg bg-slate-100 flex items-center justify-center">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="text-slate-400"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z" stroke="currentColor" stroke-width="1.5"/><path d="M14 3v5h5" stroke="currentColor" stroke-width="1.5"/></svg>
         </div>
+        <h3 class="text-[16px] font-semibold text-slate-900">Attestation de présence</h3>
+        <div class="flex items-center gap-3">
+          <span class="inline-flex items-center gap-2 text-xs px-3 py-1 rounded bg-slate-100 text-slate-600"><span>📅</span>30 Nov 2024</span>
+          <button class="inline-flex items-center gap-2 h-9 px-4 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm"><span>⬇️</span>Télécharger</button>
+        </div>
+      </article>
+      <article class="rounded-xl border border-slate-200 bg-white shadow-sm p-6 flex flex-col gap-4">
+        <div class="w-12 h-12 rounded-lg bg-slate-100 flex items-center justify-center">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="text-slate-400"><rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M3 9h18" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <h3 class="text-[16px] font-semibold text-slate-900">Relevé de notes</h3>
+        <div class="flex items-center gap-3">
+          <span class="inline-flex items-center gap-2 text-xs px-3 py-1 rounded bg-slate-100 text-slate-600"><span>📅</span>20 Oct 2024</span>
+          <button class="inline-flex items-center gap-2 h-9 px-4 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm"><span>⬇️</span>Télécharger</button>
+        </div>
+      </article>
+      <article class="rounded-xl border border-slate-200 bg-white shadow-sm p-6 flex flex-col gap-4">
+        <div class="w-12 h-12 rounded-lg bg-slate-100 flex items-center justify-center">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="text-slate-400"><rect x="6" y="3" width="12" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M9 7h6" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <h3 class="text-[16px] font-semibold text-slate-900">Carte étudiante</h3>
+        <div class="flex items-center gap-3">
+          <span class="inline-flex items-center gap-2 text-xs px-3 py-1 rounded bg-slate-100 text-slate-600"><span>📅</span>20 Oct 2024</span>
+          <button class="inline-flex items-center gap-2 h-9 px-4 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm"><span>⬇️</span>Télécharger</button>
+        </div>
+      </article>
+      <article class="rounded-xl border border-slate-200 bg-white shadow-sm p-6 flex flex-col gap-4">
+        <div class="w-12 h-12 rounded-lg bg-slate-100 flex items-center justify-center">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="text-slate-400"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <h3 class="text-[16px] font-semibold text-slate-900">Attestation de réussite</h3>
+        <div class="flex items-center gap-3">
+          <span class="inline-flex items-center gap-2 text-xs px-3 py-1 rounded bg-slate-100 text-slate-600"><span>📅</span>19 Sep 2024</span>
+          <button class="inline-flex items-center gap-2 h-9 px-4 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm"><span>⬇️</span>Télécharger</button>
+        </div>
+      </article>
+      <article class="rounded-xl border border-slate-200 bg-white shadow-sm p-6 flex flex-col gap-4">
+        <div class="w-12 h-12 rounded-lg bg-slate-100 flex items-center justify-center">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="text-slate-400"><path d="M5 4h14v16H5z" stroke="currentColor" stroke-width="1.5"/><path d="M8 8h8M8 12h8M8 16h8" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <h3 class="text-[16px] font-semibold text-slate-900">Certificat de scolarité</h3>
+        <div class="flex items-center gap-3">
+          <span class="inline-flex items-center gap-2 text-xs px-3 py-1 rounded bg-slate-100 text-slate-600"><span>📅</span>15 Sep 2024</span>
+          <button class="inline-flex items-center gap-2 h-9 px-4 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm"><span>⬇️</span>Télécharger</button>
+        </div>
+      </article>
+      <article class="rounded-xl border border-slate-200 bg-white shadow-sm p-6 flex flex-col gap-4">
+        <div class="w-12 h-12 rounded-lg bg-slate-100 flex items-center justify-center">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="text-slate-400"><path d="M7 4h10v4H7z" stroke="currentColor" stroke-width="1.5"/><path d="M4 10h16v10H4z" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <h3 class="text-[16px] font-semibold text-slate-900">Relevé d'absences</h3>
+        <div class="flex items-center gap-3">
+          <span class="inline-flex items-center gap-2 text-xs px-3 py-1 rounded bg-slate-100 text-slate-600"><span>📅</span>01 Dec 2024</span>
+          <button class="inline-flex items-center gap-2 h-9 px-4 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm"><span>⬇️</span>Télécharger</button>
+        </div>
+      </article>
+      <article class="rounded-xl border border-slate-200 bg-white shadow-sm p-6 flex flex-col gap-4">
+        <div class="w-12 h-12 rounded-lg bg-slate-100 flex items-center justify-center">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="text-slate-400"><circle cx="12" cy="8" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M6 20a6 6 0 0 1 12 0" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <h3 class="text-[16px] font-semibold text-slate-900">Attestation d'assiduité</h3>
+        <div class="flex items-center gap-3">
+          <span class="inline-flex items-center gap-2 text-xs px-3 py-1 rounded bg-slate-100 text-slate-600"><span>📅</span>05 Sep 2024</span>
+          <button class="inline-flex items-center gap-2 h-9 px-4 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm"><span>⬇️</span>Télécharger</button>
+        </div>
+      </article>
+      <article class="rounded-xl border border-slate-200 bg-white shadow-sm p-6 flex flex-col gap-4">
+        <div class="w-12 h-12 rounded-lg bg-slate-100 flex items-center justify-center">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="text-slate-400"><rect x="7" y="4" width="10" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M10 9h4M10 13h4" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <h3 class="text-[16px] font-semibold text-slate-900">Convention de stage</h3>
+        <div class="flex items-center gap-3">
+          <span class="inline-flex items-center gap-2 text-xs px-3 py-1 rounded bg-slate-100 text-slate-600"><span>📅</span>10 Sep 2024</span>
+          <button class="inline-flex items-center gap-2 h-9 px-4 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm"><span>⬇️</span>Télécharger</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="mt-12">
+      <h2 class="text-[18px] font-semibold mb-6">Vos téléchargements</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="rounded-xl bg-slate-50 p-6">
+          <div class="text-sm text-slate-600 mb-2">Documents disponibles</div>
+          <div class="text-[28px] font-bold text-blue-600">24</div>
+        </div>
+        <div class="rounded-xl bg-slate-50 p-6">
+          <div class="text-sm text-slate-600 mb-2">Téléchargés ce mois</div>
+          <div class="text-[28px] font-bold text-blue-600">8</div>
+        </div>
+        <div class="rounded-xl bg-slate-50 p-6">
+          <div class="text-sm text-slate-600 mb-2">Espace utilisé</div>
+          <div class="text-[28px] font-bold text-blue-600">156 MB</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
  
-        <h3 class="text-2xl font-bold text-slate-800 mb-3">Parlez maintenant</h3>
-        <p class="text-slate-600 mb-8 flex-1">Appel téléphonique immédiat et confidentiel</p>
-        <a href="C:\Users\yomna\Downloads\webf\pages\appel-direct.html" class="block w-full bg-primary hover:bg-blue-700 text-white font-bold py-6 rounded-2xl shadow-lg transform hover:scale-105 transition text-center text-xl">
-    Appel direct
-  </a>
+<footer class="bg-gray-900 text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-4 gap-8">
+      <div class="flex items-center justify-center md:justify-start">
+        <img src="../assets/img/logofoot.png" alt="Esprit-Care" class="h-20 w-auto">
       </div>
-
-      <!-- Carte 2 : Group Chat -->
-      <div class="group glass rounded-3xl p-8 text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-4 transition-all duration-500 w-full max-w-sm flex flex-col">
-        <div class="w-24 h-24 mx-auto mb-6 bg-purple-100 rounded-full flex items-center justify-center group-hover:scale-110 transition">
-          <i class="fas fa-users text-4xl text-purple"></i>
-        </div>
-        <h3 class="text-2xl font-bold text-slate-800 mb-3">Group Chat</h3>
-        <p class="text-slate-600 mb-8 flex-1">Échangez en temps réel avec la communauté</p>
-      <!-- Rejoindre le groupe -->
-  <a href="C:\Users\yomna\Downloads\webf\pages\group-chat.html" class="block w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-6 rounded-2xl shadow-lg transform hover:scale-105 transition text-center text-xl">
-    Rejoindre le groupe
-  </a>
+      <div>
+        <h4 class="font-semibold mb-4">Navigation</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li><a href="#" class="hover:text-white">Accueil</a></li>
+          <li><a href="#" class="hover:text-white">Demander de l’aide</a></li>
+          <li><a href="#" class="hover:text-white">Contact</a></li>
+          <li><a href="#" class="hover:text-white">FAQ</a></li>
+        </ul>
       </div>
-
-      <!-- Carte 3 : Chat conseiller -->
-      <div class="group glass rounded-3xl p-8 text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-4 transition-all duration-500 w-full max-w-sm flex flex-col">
-        <div class="w-24 h-24 mx-auto mb-6 bg-emerald-100 rounded-full flex items-center justify-center group-hover:scale-110 transition">
-          <i class="fas fa-comment-medical text-4xl text-success"></i>
-        </div>
-        <h3 class="text-2xl font-bold text-slate-800 mb-3">Chat avec un conseiller</h3>
-        <p class="text-slate-600 mb-8 flex-1">Messagerie instantanée 100 % confidentielle</p>
-        <a href="c:\Users\yomna\Downloads\webf\pages\chat-choice.html" class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-6 rounded-2xl shadow-lg transform hover:scale-105 transition text-center text-xl">
-    Démarrer le chat
-  </a>
+      <div>
+        <h4 class="font-semibold mb-4">Contact</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li>contact@esprit-care.tn</li>
+          <li>+216 71 234 567</li>
+          <li>ESPRIT, El Ghazala</li>
+        </ul>
       </div>
-
-      <!-- Carte 4 : Signaler incident -->
-      <div class="group glass rounded-3xl p-8 text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-4 transition-all duration-500 w-full max-w-sm flex flex-col">
-        <div class="w-24 h-24 mx-auto mb-6 bg-red-100 rounded-full flex items-center justify-center group-hover:scale-110 transition">
-          <i class="fas fa-exclamation-triangle text-4xl text-danger"></i>
-        </div>
-        <h3 class="text-2xl font-bold text-slate-800 mb-3">Signaler un incident</h3>
-        <p class="text-slate-600 mb-8 flex-1">Déclarez une situation urgente en toute sécurité</p>
-       <a href="c:\Users\yomna\Downloads\webf\pages\urgences.html" class="block w-full bg-danger hover:bg-red-700 text-white font-bold py-6 rounded-2xl shadow-lg transform hover:scale-105 transition text-center text-xl">
-    Signaler maintenant
-  </a>
+      <div>
+        <h4 class="font-semibold mb-4">Légal</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li><a href="#" class="hover:text-white">Confidentialité</a></li>
+          <li><a href="#" class="hover:text-white">Mentions légales</a></li>
+          <li><a href="#" class="hover:text-white">CGU</a></li>
+        </ul>
       </div>
+    </div>
+    <div class="mt-10 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+      © 2025 Esprit-Care. Tous droits réservés.
     </div>
   </div>
-</main>
-
-  <!-- Footer identique -->
-<!-- Footer -->
-  <footer class="bg-slate-900 text-slate-300 mt-24">
-    <div class="max-w-7xl mx-auto px-6 py-16">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-        <div>
-          <div class="flex items-center gap-3 mb-6">
-              <img 
-            src="logoesc.jpeg" 
-            alt="ESPRIT CARE Logo" 
-            class="h-12 w-auto object-contain"
-          />
-            <span class="text-2xl font-black text-white font-bold">ESPRIT CARE</span>
-          </div>
-          <p class="text-slate-400">Votre bien-être est notre priorité absolue.</p>
-        </div>
-
-        <div>
-          <h4 class="text-white font-bold mb-6">Navigation</h4>
-          <ul class="space-y-3">
-            <li><a href="c:\Users\yomna\Downloads\webf\pages\index.html" class="hover:text-white transition">Accueil</a></li>
-            <li><a href="#" class="hover:text-white transition">Mon dossier</a></li>
-            <li><a href="#" class="hover:text-white transition">FAQ</a></li>
-            <li><a href="#" class="hover:text-white transition">Contact</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="text-white font-bold mb-6">Contact</h4>
-          <ul class="space-y-3 text-slate-400">
-            <li>contact@esprit-care.tn</li>
-            <li>+216 71 345 678</li>
-            <li>ESPRIT, El Ghazala</li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="text-white font-bold mb-6">Légal</h4>
-          <ul class="space-y-3">
-            <li><a href="#" class="hover:text-white transition">Politique de confidentialité</a></li>
-            <li><a href="#" class="hover:text-white transition">Mentions légales</a></li>
-            <li><a href="#" class="hover:text-white transition">CGU</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="border-t border-slate-800 mt-12 pt-8 text-center text-slate-500">
-        © 2025 ESPRIT CARE – Tous droits réservés
-      </div>
-    </div>
-  </footer>
+</footer>
 </body>
 </html>
