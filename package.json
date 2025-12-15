@@ -15,7 +15,9 @@
     "sass:watch": "sass --watch styles.scss:public/scss.css --style=expanded",
     "format:map": "node scripts/formatMap.js",
     "minify:map": "node scripts/minifyMap.js",
-    "postcss:build": "postcss public/scss.css -o public/scss.css"
+    "postcss:build": "postcss public/scss.css -o public/scss.css",
+    "build": "npx tailwindcss -i ./src/input.css -o ./public/style.css --minify"
+
   },
   "devDependencies": {
     "autoprefixer": "^10.4.22",
